@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class array
+{
+    public static void main(String[] args) {
+
+        ArrayList <String> al = new ArrayList <String>(); //creating generic form of array list
+        al.add("Dinesh");
+        al.add("John");
+        al.add("Ravi");
+        al.add("Ajay");
+        Iterator itr= al.iterator(); //iterator() method returns the iterator to the start of the class
+        while(itr.hasNext()) // hasNext()=>returns the next element
+        {
+          System.out.println(""+itr.next());
+        }
+
+    }
+}
