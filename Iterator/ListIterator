@@ -1,0 +1,54 @@
+//Iterator or ListIterator interface enables us to cycle throught a collection obtaining or removing elements
+// boolean hasNext() =>returns true if there is a next elements
+//Object next() => returns the next element if there is no ElementException is thrown
+// Java program for implementation of Bubble Sort
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class iterator
+{
+  public static void main(String[] args) {
+    //creating an array List
+    ArrayList al = new ArrayList();
+    //adding elements to the array List
+    al.add("c");
+    al.add("a");
+    al.add("e");
+    al.add("b");
+    al.add("d");
+    al.add("f");
+    // Use iterator to display the contents of al
+    System.out.println("Original contents of al:");
+    Iterator itr = al.iterator();
+    while(itr.hasNext())
+    {
+        Object element = itr.next();
+        System.out.print(element+" ");
+    }
+    System.out.println();
+    ListIterator litr = al.listIterator();
+    while(litr.hasNext())
+    {
+        Object element = litr.next();
+        litr.set(element+"+");
+    }
+    System.out.println("Modified set of contents of al:");
+    itr= al.iterator();
+    while (itr.hasNext()) {
+        Object element = itr.next();
+        System.out.println(element+" ");
+    }
+    System.out.println("");
+    //Now display list backwards
+    System.out.println("Modified list backwards:");
+    while(litr.hasPrevious()) //Returns the previous element
+    {
+        Object element = litr.previous();
+        System.out.println(element+" ");
+    }
+    System.out.println("");
+  }
+}
