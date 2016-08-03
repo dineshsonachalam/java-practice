@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class calendar
+{
+  public static void main(String[] args) {
+    //creating a calendar
+    Calendar cal = Calendar.getInstance();
+    //print the current date
+    System.out.println("The current date: "+cal.getTime());
+    //add 20 days to the calendar
+    cal.add(Calendar.DATE,20);
+    System.out.println("20 days later:"+cal.getTime());
+    //subtract  2 months from the calendar
+    cal.add(Calendar.MONTH,-2);
+    System.out.println("2 months before:"+cal.getTime());
+    //subtract 5 year from the calendar
+    cal.add(Calendar.YEAR,-5);
+      System.out.println("5 years before:"+cal.getTime());
+
+
+  }
+}
