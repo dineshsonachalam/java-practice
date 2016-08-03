@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class calendar
+{
+  public static void main(String[] args) {
+    //creating a calendar
+    Calendar cal = Calendar.getInstance();
+    System.out.println("The current date: "+cal.getTime());
+    // creating a future calendar
+    Calendar future=Calendar.getInstance();
+    //change year in future calendar
+    future.set(Calendar.YEAR,2018);
+    System.out.println("Year future:"+future.get(Calendar.YEAR));
+    //check if calendar date is after current date
+    Date time=future.getTime();
+    if(future.after(cal))
+    {
+        System.out.println("Date"+time+" is after current date");
+    }
+    //creating a past calendar
+    Calendar past = Calendar.getInstance();
+    past.set(Calendar.YEAR,2000);
+        //check the period of future is before the past
+        System.out.println("Past:"+future.before(past)); //obviously it returns false
+    cal.clear();
+    System.out.println("The calendar shows:"+cal.getTime());
+    //creating object clone
+    Calendar cal1=new GregorianCalendar(2008, 05, 20);
+
+    System.out.println("Past:"+cal1.getTime());
+    //creating a clone
+    Calendar cal2=(Calendar)cal1.clone();
+    System.out.println("Cloned calendar:"+cal2.getTime());
+
+
+    }
+}
+
